@@ -19,7 +19,11 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={`${styles.countDown} ${time>0 ? styles.active : styles.inactive} `}>
-        <div>{time}</div>
+        <div>{`
+          ${
+            Math.floor(time / 3600) > 0 ?
+            ('0' + Math.floor(time / 3600) + ':').slice(-3) : ''
+          }${('0' + (Math.floor(time / 60) % 60)).slice(-2)}:${('0' + time % 60).slice(-2)}`}</div>
       </div>
     </main>
   );
