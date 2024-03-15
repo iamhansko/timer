@@ -6,8 +6,13 @@ import { useSearchParams } from "next/navigation";
 
 export default function Home() {
   const searchParams = useSearchParams()
-  const timeParam = searchParams.get('time') || '60'
-  const [time, setTime] = useState(parseInt(timeParam))
+  // const timeParam = parseInt(searchParams.get('time') ? searchParams.get('time') as string : '60')
+  const isNumber = /\d+/
+  const hour = searchParams.get('h') && isNumber.test(searchParams.get('h') as string) ? searchParams.get('h') as string : '0'
+  const minute = searchParams.get('m') && isNumber.test(searchParams.get('m') as string) ? searchParams.get('m') as string : '0'
+  const second = searchParams.get('s')  && isNumber.test(searchParams.get('s') as string) ? searchParams.get('s') as string : '0'
+  const timeParam = parseInt(hour) * 3600 + parseInt(minute) * 60 + parseInt(second)
+  const [time, setTime] = useState(timeParam)
 
   useEffect(() => {
     const interval = setInterval(() => {
