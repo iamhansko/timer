@@ -14,6 +14,8 @@ export default function Home() {
   const timeParam = parseInt(hour) * 3600 + parseInt(minute) * 60 + parseInt(second)
   const [time, setTime] = useState(timeParam)
 
+  const date = searchParams.get('date') && isNumber.test(searchParams.get('date') as string) ? searchParams.get('date') as string : '0'
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (time > 0) setTime(time - 1)
