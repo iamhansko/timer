@@ -1,2 +1,2 @@
-# skku-timer
+# Timer
 Timer-equipped Website - Next.js
