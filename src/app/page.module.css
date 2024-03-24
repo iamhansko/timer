@@ -1,6 +1,8 @@
 .main {
   text-align: center;
   margin-top: 200px;
+  color: #ffffff;
+  min-height: 600px;
 }
 
 .countDown {
@@ -21,4 +23,23 @@
 
 .inactive {
   color: #ca2334;
+}
+
+@media screen and (max-height: 720px) {
+  .sticky {
+    position: relative !important;
+    top: 100px;
+  }
+}
+
+.footer {
+  width: 100vw;
+  text-align: center;
+  position: absolute;
+  bottom: 40px;
+  font-size: 16pt;
+}
+
+.footer a {
+  color: #ffffff;
 }

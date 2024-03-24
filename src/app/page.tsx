@@ -50,6 +50,9 @@ export default function Home() {
             ('0' + Math.floor(time / 3600) + ':').slice(-3) : ''
           }${('0' + (Math.floor(time / 60) % 60)).slice(-2)}:${('0' + time % 60).slice(-2)}`}</div>
       </div>
+      <footer className={`${styles.sticky} ${styles.footer}`}>
+        Created By Hyunsu Ko(<Link target="blank" href={"https://github.com/iamhansko/timer"}>GitHub</Link>), 2024
+      </footer>
     </main>
   );
 }
