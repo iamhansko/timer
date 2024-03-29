@@ -34,7 +34,7 @@ export default function Home() {
     <main className={styles.main}>
       <Link href={"https://giphy.com/embed/ea74cjF0jieXu"}><Image src="/cat.gif" width={300} height={300} alt={"Cat"} /></Link>
       <div className={`${styles.countDown} ${time>0 || leftTime>0 ? styles.active : styles.inactive} `}>
-        <div>{dateParam ?
+        <div>{parseInt(dateParam) && leftTime > 0 ?
         `
         ${
           Math.floor(leftTime / (60 * 60 * 24))
