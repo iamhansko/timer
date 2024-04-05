@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Suspense } from "react";
+import { Suspense } from "react";import localFont from "next/font/local";
+
+const hbiosSysFont = localFont({src:'../../public/fonts/HBIOS-SYS.woff2'});
 
 export const metadata: Metadata = {
   title: "Timer",
@@ -14,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><Suspense>{children}</Suspense></body>
+      <body className={hbiosSysFont.className}><Suspense>{children}</Suspense></body>
     </html>
   );
 }
