@@ -46,5 +46,7 @@ npm run start
 ```
 
 ### Docker Container
+```
 docker build -t timer .
 docker run -d -p 3000:3000 timer
+```
