@@ -1,7 +1,7 @@
 # Timer
 Timer-equipped Website - Next.js
 
-<img src="docs/assets/timer.gif" />
+<a href="https://timer.scg.skku.ac.kr?s=5"><img src="docs/assets/timer.gif" /></a>
 
 # How To Use
 Use Query Parameters to Set Time Limits
